@@ -6,24 +6,32 @@ function computerPlay() {
 
 //function checks to see who wins
 function playRound(playerSelection, computerSelection) {
+    if (playerSelection === computerSelection) {
+        return "Draw"
+    }
     if (playerSelection === "Rock" && computerSelection === "Scissors") {
+
         return "Computer selected Scissors. You win! rock beats scissors!";
+
     } else if (playerSelection === "Rock" && computerSelection === "Paper") {
+
         return "Computer selected Paper. You lose! paper beats rock!";
-    } else if (playerSelection === "Rock" && computerSelection === "Rock") {
-        return "Computer selected Rock. It's a DRAW";
-    } else if (playerSelection === "Paper" && computerSelection === "Rock") {
+
+    }  else if (playerSelection === "Paper" && computerSelection === "Rock") {
+
         return "Computer selected Rock. You win! paper beats rock!";
-    } else if (playerSelection === "Paper" && computerSelection === "Paper") {
-        return "Computer selected Paper. It's a DRAW";
+
     } else if (playerSelection === "Paper" && computerSelection === "Scissors") {
+
         return "Computer selected Scissors. You lose! scissors beats paper";
+
     } else if (playerSelection === "Scissors" && computerSelection === "Rock") {
+
         return "Computer selected Rock. You lose! rock beats scissors";
+
     } else if (playerSelection === "Scissors" && computerSelection === "Paper") {
+
         return "Computer selected Paper. You win! scissors beats paper";
-    } else if (playerSelection === "Scissors" && computerSelection === "Scissors") {
-        return "Computer selected Scissors. It's a DRAW";
     }
 }
 
